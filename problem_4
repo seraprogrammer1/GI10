@@ -1,0 +1,21 @@
+function accum(s) {
+    let str = '';
+    for (let i = 0; i < s.length; i++){
+      
+      let start = s[i].toUpperCase()
+      const char = s[i].toLowerCase()
+      
+      if (i > 0){
+        for (let i2 = 0; i2 < i; i2++){
+          start += char;
+        }
+      }
+      
+      if (i != s.length - 1){
+        start += "-"
+      }
+      
+      str += start;
+    }
+    return str;
+  }

@@ -1,0 +1,19 @@
+function moveZeros(arr) {
+  let numberOfZeros = 0
+  let newArr = []
+  
+  arr.map((x) => {
+    if (x !== 0){
+      newArr.push(x)
+    }
+    else{
+      numberOfZeros++
+    }
+  })
+  
+  for (let i = 0; i < numberOfZeros; i++){
+    newArr.push(0)
+  }
+  
+  return newArr;
+}

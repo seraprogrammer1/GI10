@@ -1,0 +1,17 @@
+function duplicateEncode(word){
+  let str = ''
+  word = word.toLowerCase()
+    for (let i = 0; i < word.length;i++){
+      letter = word[i]
+      if (word.indexOf(letter) == word.lastIndexOf(letter)){
+        str += "("
+      }
+      else{
+        str += ")"
+      }
+    }
+  return str;
+}
+// index of 
+// last index of
+// if they are the same then it only shows up once but if not shows up more then once

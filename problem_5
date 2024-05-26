@@ -1,0 +1,20 @@
+function spinWords(string){
+    let words = string.split(' ')
+  let newString = '';
+  
+  for (let i = 0; i < words.length; i++){
+    let word = words[i];
+
+    if (word.length >= 5){
+     word = word.split('').reverse().join('');
+    }
+
+    if (i != 0 && i != words.length - 1){
+        newString += ' '
+    }
+
+    words[i] = word;
+  }
+
+  return words.join(' ');
+}

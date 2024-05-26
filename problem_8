@@ -1,0 +1,67 @@
+//original way I thought
+function allNinesCheck(numbers){
+  numbers = numbers.toString().split('')
+  for (let i = 0; i < numbers.length; i++){
+    const num = numbers[i]
+    if (num != 9){
+      return false
+    }
+  }
+  return true
+}
+function allNines(num){
+  for (let i = 0; i <= 20000000; i++){
+    if (allNinesCheck(num * i)){
+      return `${num} * ${i} = ${num * i}`
+    }
+  }
+}
+
+// function allNinesCheck(numbers){
+//   numbers = numbers.toString().split('')
+//   for (let i = 0; i < numbers.length; i++){
+//     const num = numbers[i]
+//     if (num != 9n){
+//       return false
+//     }
+//   }
+// }
+
+function isDecimal(num){
+  num = parseInt(num)
+  if (Math.floor(num) == num){
+    return false
+  }
+  else
+  {
+    return true
+  }
+}
+
+// function allNines(num){
+//   if (!(num <= 4000)){
+//     return 'number above 4000'
+//   }
+//   else if (num % 2 === 0){// even number
+//     return -1
+//   }
+
+
+//   let found = false
+//   let nineString = ''
+//   let foundNumber;
+
+//   while(!found){
+//     const value = nineString += 9
+//     // console.log(value)
+//     // console.log(!isDecimal(value/num))
+//     if (!isDecimal(value/num)){
+//       foundNumber = value;
+//       found = true;
+//     }
+//   }
+//   return num * foundNumber
+// }
+
+console.log(allNines(9))
+console.log(32258064516129n === 30999999999999968n)
