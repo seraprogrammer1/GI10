@@ -1,3 +1,11 @@
+// reverse the order of a word if it is 5 or more character
+
+// "Hey fellow warriors"  --> "Hey wollef sroirraw" 
+// "This is a test        --> "This is a test" 
+// "This is another test" --> "This is rehtona test"
+
+// felt good about this just took a try or 2
+
 function spinWords(string){
     let words = string.split(' ')
   let newString = '';

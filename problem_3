@@ -1,3 +1,11 @@
+// base on n it return an array that has from 0 to n by the power of 2 inside
+
+// n = 0  ==> [1]        # [2^0]
+// n = 1  ==> [1, 2]     # [2^0, 2^1]
+// n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+// felt good on this problem
+
 function powersOfTwo(n){
   
   const newArray = []

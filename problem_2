@@ -1,3 +1,11 @@
+// if there age is 55 or more and handicaps level is above seven then they are a Senior 
+// if not they are open
+
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+// felt good about this problem
+
 function openOrSenior(data){
   // ...
   output = [];

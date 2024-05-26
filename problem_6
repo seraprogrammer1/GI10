@@ -1,3 +1,13 @@
+
+// if a character show up only once it is replaced with ( and more then once is )
+
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))((" 
+
+// took me a second but I got it and feel good about it
+
 function duplicateEncode(word){
   let str = ''
   word = word.toLowerCase()
@@ -12,6 +22,3 @@ function duplicateEncode(word){
     }
   return str;
 }
-// index of 
-// last index of
-// if they are the same then it only shows up once but if not shows up more then once
