@@ -1,67 +1,23 @@
-//original way I thought
-function allNinesCheck(numbers){
-  numbers = numbers.toString().split('')
-  for (let i = 0; i < numbers.length; i++){
-    const num = numbers[i]
-    if (num != 9){
-      return false
-    }
-  }
-  return true
-}
-function allNines(num){
-  for (let i = 0; i <= 20000000; i++){
-    if (allNinesCheck(num * i)){
-      return `${num} * ${i} = ${num * i}`
-    }
-  }
-}
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+// have to find the number that occurs and odd number of time will only be one
 
-// function allNinesCheck(numbers){
-//   numbers = numbers.toString().split('')
-//   for (let i = 0; i < numbers.length; i++){
-//     const num = numbers[i]
-//     if (num != 9n){
-//       return false
-//     }
-//   }
-// }
+function findOdd(A) {
+  let log = {};
 
-function isDecimal(num){
-  num = parseInt(num)
-  if (Math.floor(num) == num){
-    return false
+  for (let i = 0; i < A.length; i++) {
+      if (!log[A[i]]) {
+          log[A[i]] = 0;
+      }
+      log[A[i]]++;
   }
-  else
-  {
-    return true
+
+  for (let [key, times] of Object.entries(log)) {
+      if (times % 2 != 0) {
+          return `${key}, ${times}`;
+      }
   }
 }
 
-// function allNines(num){
-//   if (!(num <= 4000)){
-//     return 'number above 4000'
-//   }
-//   else if (num % 2 === 0){// even number
-//     return -1
-//   }
-
-
-//   let found = false
-//   let nineString = ''
-//   let foundNumber;
-
-//   while(!found){
-//     const value = nineString += 9
-//     // console.log(value)
-//     // console.log(!isDecimal(value/num))
-//     if (!isDecimal(value/num)){
-//       foundNumber = value;
-//       found = true;
-//     }
-//   }
-//   return num * foundNumber
-// }
-
-console.log(allNines(9))
-console.log(32258064516129n === 30999999999999968n)
+console.log(findOdd([0,1,0,1,0]))
+console.log(findOdd([1,2,2,3,3,3,4,3,3,2,2,1]))
